@@ -10,9 +10,10 @@
 		723B36872632100D004C7432 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B36862632100D004C7432 /* AppDelegate.swift */; };
 		723B36892632100D004C7432 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B36882632100D004C7432 /* SceneDelegate.swift */; };
 		723B368B2632100D004C7432 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B368A2632100D004C7432 /* ViewController.swift */; };
-		723B368E2632100D004C7432 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723B368C2632100D004C7432 /* Main.storyboard */; };
 		723B36902632100F004C7432 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723B368F2632100F004C7432 /* Assets.xcassets */; };
 		723B36932632100F004C7432 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723B36912632100F004C7432 /* LaunchScreen.storyboard */; };
+		723B36A826321267004C7432 /* BreweriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B36A726321267004C7432 /* BreweriesRequest.swift */; };
+		723B36AD26321450004C7432 /* BreweryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723B36AC26321450004C7432 /* BreweryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +21,11 @@
 		723B36862632100D004C7432 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		723B36882632100D004C7432 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		723B368A2632100D004C7432 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		723B368D2632100D004C7432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		723B368F2632100F004C7432 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723B36922632100F004C7432 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		723B36942632100F004C7432 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		723B36A726321267004C7432 /* BreweriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweriesRequest.swift; sourceTree = "<group>"; };
+		723B36AC26321450004C7432 /* BreweryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		723B36852632100D004C7432 /* Breweries */ = {
 			isa = PBXGroup;
 			children = (
+				723B369E263210CD004C7432 /* Model */,
+				723B369D263210BF004C7432 /* Networking */,
 				723B36862632100D004C7432 /* AppDelegate.swift */,
 				723B36882632100D004C7432 /* SceneDelegate.swift */,
 				723B368A2632100D004C7432 /* ViewController.swift */,
-				723B368C2632100D004C7432 /* Main.storyboard */,
 				723B368F2632100F004C7432 /* Assets.xcassets */,
 				723B36912632100F004C7432 /* LaunchScreen.storyboard */,
 				723B36942632100F004C7432 /* Info.plist */,
 			);
 			path = Breweries;
+			sourceTree = "<group>";
+		};
+		723B369D263210BF004C7432 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				723B36A726321267004C7432 /* BreweriesRequest.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		723B369E263210CD004C7432 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				723B36AC26321450004C7432 /* BreweryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +145,6 @@
 			files = (
 				723B36932632100F004C7432 /* LaunchScreen.storyboard in Resources */,
 				723B36902632100F004C7432 /* Assets.xcassets in Resources */,
-				723B368E2632100D004C7432 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				723B36AD26321450004C7432 /* BreweryModel.swift in Sources */,
 				723B368B2632100D004C7432 /* ViewController.swift in Sources */,
 				723B36872632100D004C7432 /* AppDelegate.swift in Sources */,
+				723B36A826321267004C7432 /* BreweriesRequest.swift in Sources */,
 				723B36892632100D004C7432 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,14 +166,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		723B368C2632100D004C7432 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				723B368D2632100D004C7432 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		723B36912632100F004C7432 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
